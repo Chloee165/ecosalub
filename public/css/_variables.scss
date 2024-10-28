@@ -1,0 +1,34 @@
+//Colors
+$white: #E3EAFF;
+$charcoal: #3C4D54;
+$charcoal-t: #3c4d54f5;
+$blue: #008FD5;
+$paleBlue: #2CB5F8;
+//Font
+$font: "eurostile", sans-serif;
+.blue {
+    color: $blue!important;
+}
+
+//Margine
+@mixin margin-base {
+    margin: 20px 23px 60px 23px;
+    @media (min-width: 768px) {
+        margin: 10px 15px 0px 15px;
+    }
+    @media (min-width: 1024px) {
+        margin: 26px 35px 0px 35px;
+    }
+    @media (min-width: 1200px) {
+        margin: 26px 65px 0px 65px;
+    }
+    @media (min-width: 1920px) {
+        margin: 35px 140px 0px 140px;
+    }
+}
+
+@mixin flex-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}

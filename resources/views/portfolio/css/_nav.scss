@@ -1,0 +1,97 @@
+header {
+    color: rgb(32, 31, 28);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+    background-color: $beige;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: rgb(32, 31, 28);
+    margin-left: 60px;
+    font-family: "dela-gothic-one", sans-serif;
+    text-decoration: none;
+    font-size: larger;
+}
+
+h1 {
+    font-family: "dela-gothic-one", sans-serif;
+    margin: 0;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px; 
+    height: auto; 
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); 
+}
+
+
+input {
+    border: 1px solid #fff;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: inherit;
+    cursor: pointer;  
+}
+  
+  h1 {
+    margin-top: .5rem;
+  }
+  
+  .wavy {
+    animation-name: wavy;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    position: relative;
+    display: inline-block; /* Ensure inline-block for positioning */
+  }
+  
+  @keyframes wavy {
+    0% {
+        top: 0px;
+      }
+      50% {
+        top: -15px;
+      }
+      100% {
+        top: 0px;
+      }
+  }
+  
