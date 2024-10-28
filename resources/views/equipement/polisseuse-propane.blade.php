@@ -6,7 +6,7 @@
             @foreach($polisseusesPropane as $polisseuse)
             <li>
                 <div class="carousel">
-                    <div id="carousel-{{ $polisseuse->id }}" class="carousel slide" data-ride="carousel">
+                    <div id="carousel-{{ $polisseuse->id }}" class="carousel slide">
                         <div class="carousel-inner">
                             @foreach($polisseuse->images as $index => $image)
                                 <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
@@ -47,7 +47,7 @@
                         @endif
 
                         @if($polisseuse->prix)
-                            <li><strong>Prix:</strong> {{ $polisseuse->prix }} $</li>
+                            <li><strong>Prix:</strong> {{ $polisseuse->prix }} $CAD</li>
                         @endif
 
                         <!-- Add documents section with updated class -->

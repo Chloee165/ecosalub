@@ -6,7 +6,7 @@
             @foreach($machinesGlaceSeche as $machine)
             <li>
                 <div class="carousel">
-                    <div id="carousel-{{ $machine->id }}" class="carousel slide" data-ride="carousel">
+                    <div id="carousel-{{ $machine->id }}" class="carousel slide">
                         <div class="carousel-inner">
                             @foreach($machine->images as $index => $image)
                                 <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
@@ -47,7 +47,7 @@
                         @endif
 
                         @if($machine->prix)
-                            <li><strong>Prix:</strong> {{ $machine->prix }} $</li>
+                            <li><strong>Prix:</strong> {{ $machine->prix }} $CAD</li>
                         @endif
 
                         <!-- Add documents section with updated class -->

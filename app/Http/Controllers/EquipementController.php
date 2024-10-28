@@ -132,7 +132,7 @@ class EquipementController extends Controller
             'largeur_plateau_nettoyage' => 'nullable|string|max:25',
             'largeur_tampons' => 'nullable|string|max:25',
             'galonnage' => 'nullable|string|max:25',
-            'superficie_nettoyage' => 'nullable|string|max:25',
+            'superficie_nettoyage' => 'nullable|string|max:255',
             'prix' => 'nullable|string|max:25',
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'documents.*' => 'nullable|file|mimes:pdf,doc,docx|max:2048',

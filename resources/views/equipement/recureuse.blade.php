@@ -6,7 +6,7 @@
             @foreach($recureuses as $recureuse)
             <li>
                 <div class="carousel">
-                    <div id="carousel-{{ $recureuse->id }}" class="carousel slide" data-ride="carousel">
+                    <div id="carousel-{{ $recureuse->id }}" class="carousel slide">
                         <div class="carousel-inner">
                             
                             @foreach($recureuse->images as $index => $image)
@@ -49,7 +49,7 @@
                         @endif
 
                         @if($recureuse->prix)
-                        <li><strong>Prix:</strong> {{ $recureuse->prix }} $</li>
+                        <li><strong>Prix:</strong> {{ $recureuse->prix }} $CAD</li>
                         @endif
 
                         <!-- Add documents section -->
