@@ -11,7 +11,8 @@
             <a id="logo-nav" href="{{ route('home') }}">
                 <img class="logo" src="{{ asset('img/logo-charcoal.png') }}" alt="">
             </a>
-            <input type="hidden" alt="Récureuse, Polisseuse, Entretien commercial, équipement de nettoyage, ménage commercial, nettoyage de plancher commercial, scrubber, burnisher, tennant, nobles, pioneer, advance">
+            <input type="hidden"
+                alt="Récureuse, Polisseuse, Entretien commercial, équipement de nettoyage, ménage commercial, nettoyage de plancher commercial, scrubber, burnisher, tennant, nobles, pioneer, advance">
         </div>
 
         <div id="nav">
@@ -58,7 +59,7 @@
 <nav id="nav-mobile">
     <!-- Hamburger Menu for Mobile -->
     <div class="hamburger" id="hamburgerMenu">
-        <img src="{{ asset('img/list.png') }}" alt="">
+        <img src="{{ asset('img/list.png') }}" id="hamburgerImage">
     </div>
 
     <!-- Fullscreen Mobile Menu -->
@@ -85,14 +86,3 @@
     </section>
 </header>
 
-<script>
-    document.getElementById('hamburgerMenu').addEventListener('click', function() {
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenu.classList.toggle('open');
-    });
-
-    document.getElementById('closeMenuBtn').addEventListener('click', function() {
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenu.classList.remove('open');
-    });
-</script>
