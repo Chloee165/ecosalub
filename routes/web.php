@@ -45,9 +45,10 @@ Route::get('/equipement/machine-glace-seche', [EquipementController::class, 'sho
 Route::get('/equipement/polisseuse-batteries', [EquipementController::class, 'showPolisseuseBatteries'])->name('equipement.polisseuse-batteries');
 Route::get('/equipement/polisseuse-propane', [EquipementController::class, 'showPolisseusePropane'])->name('equipement.polisseuse-propane');
 Route::get('/equipement/recureuse', [EquipementController::class, 'showRecureuse'])->name('equipement.recureuse');
+Route::get('/equipement/{type}/{id}', [EquipementController::class, 'showEquipement'])->name('equipement.show');
 
 // Equipment admin section
-Route::get('/admin/equipements/{type}', [EquipementController::class, 'showEquipement'])->name('equipement.show');
+Route::get('/admin/equipements/{type}', [EquipementController::class, 'showEquipementAdmin'])->name('equipement.admin.show');
 Route::get('/admin/equipement/{type}/{id}/edit', [EquipementController::class, 'edit'])->name('equipement.edit');
 Route::put('/admin/equipement/{type}/{id}', [EquipementController::class, 'update'])->name('equipement.update');
 Route::delete('/admin/equipements/{type}/{id}', [EquipementController::class, 'destroy'])->name('equipement.destroy');

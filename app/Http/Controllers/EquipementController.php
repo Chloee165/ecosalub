@@ -71,11 +71,51 @@ class EquipementController extends Controller
         return view('equipement.recureuse', compact('recureuses'));
     }
 
-
     /**
-     * Show equipment by type.
+     * Show equipment by type
      */
-    public function showEquipement($type)
+    public function showEquipement($type, $id)
+    {
+        // Fetch the specific equipment based on the type and ID
+        $equipement = null;
+    
+        switch ($type) {
+            case 'aspirateur':
+                $equipement = Aspirateur::with(['images', 'documents'])->findOrFail($id);
+                break;
+            case 'balai-mecanique':
+                $equipement = BalaiMecanique::with(['images', 'documents'])->findOrFail($id);
+                break;
+            case 'decapeuse':
+                $equipement = Decapeuse::with(['images', 'documents'])->findOrFail($id);
+                break;
+            case 'extracteur-tapis':
+                $equipement = ExtracteurTapis::with(['images', 'documents'])->findOrFail($id);
+                break;
+            case 'machine-glace-seche':
+                $equipement = MachineGlaceSeche::with(['images', 'documents'])->findOrFail($id);
+                break;
+            case 'polisseuse-batteries':
+                $equipement = PolisseuseBatteries::with(['images', 'documents'])->findOrFail($id);
+                break;
+            case 'polisseuse-propane':
+                $equipement = PolisseusePropane::with(['images', 'documents'])->findOrFail($id);
+                break;
+            case 'recureuse':
+                $equipement = Recureuse::with(['images', 'documents'])->findOrFail($id);
+                break;
+            default:
+                abort(404); // If type is not recognized
+        }
+      
+        // Return the view for a specific equipment item
+        return view('equipement.show', compact('equipement', 'type'));
+    }
+    
+    /**
+     * Show equipment by type for Admin
+     */
+    public function showEquipementAdmin($type)
     {
         // Fetch the right model based on the equipment type
         switch ($type) {

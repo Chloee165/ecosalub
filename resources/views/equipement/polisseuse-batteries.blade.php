@@ -24,7 +24,9 @@
                         </a>
                     </div>
                     <!-- Apply the same class to center marque & modele -->
+                    <a href="{{ route('equipement.show', ['type' => 'polisseuse-batteries', 'id' => $polisseuse->id]) }}" class="marque-modele">
                     <p class="marque-modele">{{ $polisseuse->marque }} {{ $polisseuse->modele }}</p>
+                    </a>
                     <ul>
                         @if($polisseuse->largeur_plateau_nettoyage)
                             <li><strong>Largeur du plateau de nettoyage:</strong> {{ $polisseuse->largeur_plateau_nettoyage }}</li>

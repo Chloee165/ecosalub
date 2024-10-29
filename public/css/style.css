@@ -575,6 +575,8 @@ ul {
 }
 #footer #footer-content iframe {
   width: 100vw;
+  height: -moz-min-content;
+  height: min-content;
 }
 @media (min-width: 768px) {
   #footer #footer-content {
@@ -848,6 +850,8 @@ ul {
 
 iframe {
   max-width: 100%;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .checkbox-container {

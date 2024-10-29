@@ -24,7 +24,9 @@
                         </a>
                     </div>
                     <!-- Apply the same class to center marque & modele -->
+                    <a href="{{ route('equipement.show', ['type' => 'balai-mecanique', 'id' => $balai->id]) }}" class="marque-modele">
                     <p class="marque-modele">{{ $balai->marque }} {{ $balai->modele }}</p>
+                    </a>
                     <ul>
                         @if($balai->largeur_plateau_nettoyage)
                             <li><strong>Largeur du plateau de nettoyage:</strong> {{ $balai->largeur_plateau_nettoyage }}</li>

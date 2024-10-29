@@ -14,14 +14,14 @@
 
                     <a href="#">Équipements</a>
                     <ul class="dropdown-content">
-                        <li><a href="{{ route('equipement.show', ['type' => 'recureuse']) }}">Récureuses</a></li>
-                        <li><a href="{{ route('equipement.show', ['type' => 'polisseuse-propane']) }}">Polisseuses propane</a></li>
-                        <li><a href="{{ route('equipement.show', ['type' => 'polisseuse-batteries']) }}">Polisseuses batteries</a></li>
-                        <li><a href="{{ route('equipement.show', ['type' => 'decapeuse']) }}">Décapeuses</a></li>
-                        <li><a href="{{ route('equipement.show', ['type' => 'aspirateur']) }}">Aspirateurs</a></li>
-                        <li><a href="{{ route('equipement.show', ['type' => 'extracteur-tapis']) }}">Extracteurs à tapis</a></li>
-                        <li><a href="{{ route('equipement.show', ['type' => 'balai-mecanique']) }}">Balais mécaniques</a></li>
-                        <li><a href="{{ route('equipement.show', ['type' => 'machine-glace-seche']) }}">Machines à glace sèche</a></li>
+                        <li><a href="{{ route('equipement.admin.show', ['type' => 'recureuse']) }}">Récureuses</a></li>
+                        <li><a href="{{ route('equipement.admin.show', ['type' => 'polisseuse-propane']) }}">Polisseuses propane</a></li>
+                        <li><a href="{{ route('equipement.admin.show', ['type' => 'polisseuse-batteries']) }}">Polisseuses batteries</a></li>
+                        <li><a href="{{ route('equipement.admin.show', ['type' => 'decapeuse']) }}">Décapeuses</a></li>
+                        <li><a href="{{ route('equipement.admin.show', ['type' => 'aspirateur']) }}">Aspirateurs</a></li>
+                        <li><a href="{{ route('equipement.admin.show', ['type' => 'extracteur-tapis']) }}">Extracteurs à tapis</a></li>
+                        <li><a href="{{ route('equipement.admin.show', ['type' => 'balai-mecanique']) }}">Balais mécaniques</a></li>
+                        <li><a href="{{ route('equipement.admin.show', ['type' => 'machine-glace-seche']) }}">Machines à glace sèche</a></li>
                     </ul>
 
             </li>

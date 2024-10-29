@@ -24,7 +24,9 @@
                         </a>
                     </div>
                     <!-- Apply the same class to center marque & modele -->
+                    <a href="{{ route('equipement.show', ['type' => 'extracteur-tapis', 'id' => $extracteur->id]) }}" class="marque-modele">
                     <p class="marque-modele">{{ $extracteur->marque }} {{ $extracteur->modele }}</p>
+                    </a>
                     <ul>
                         @if($extracteur->largeur_plateau_nettoyage)
                             <li><strong>Largeur du plateau de nettoyage:</strong> {{ $extracteur->largeur_plateau_nettoyage }}</li>

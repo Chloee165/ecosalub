@@ -26,7 +26,9 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
+                    <a href="{{ route('equipement.show', ['type' => 'recureuse', 'id' => $recureuse->id]) }}" class="marque-modele">
                     <p class="marque-modele">{{ $recureuse->marque }} {{ $recureuse->modele }}</p>
+                    </a>
                     <ul>
                         @if($recureuse->largeur_plateau_nettoyage)
                             <li><strong>Largeur du plateau de nettoyage:</strong> {{ $recureuse->largeur_plateau_nettoyage }}</li>
