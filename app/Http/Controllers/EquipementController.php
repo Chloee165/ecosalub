@@ -169,12 +169,13 @@ class EquipementController extends Controller
         $request->validate([
             'marque' => 'required|string|max:255',
             'modele' => 'required|string|max:255',
+            'description' => 'nullable|string|max:5000',
             'largeur_plateau_nettoyage' => 'nullable|string|max:25',
             'largeur_tampons' => 'nullable|string|max:25',
             'galonnage' => 'nullable|string|max:25',
             'superficie_nettoyage' => 'nullable|string|max:255',
             'prix' => 'nullable|string|max:25',
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:',
             'documents.*' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
         ]);
 
@@ -182,6 +183,7 @@ class EquipementController extends Controller
         $equipement->update($request->only([
             'marque',
             'modele',
+            'description',
             'largeur_plateau_nettoyage',
             'largeur_tampons',
             'galonnage',
@@ -227,11 +229,9 @@ class EquipementController extends Controller
         }
 
         // Redirect with success message
-        return redirect()->route('equipement.show', ['type' => $type])
+        return redirect()->route('equipement.show', ['type' => $type, 'id' => $equipement->id])
             ->with('success', 'Équipement et fichiers modifiés avec succès.');
     }
-
-
 
     /**
      * Destroy (delete) equipment.
@@ -294,7 +294,6 @@ class EquipementController extends Controller
             ->with('success', 'Image supprimée avec succès.');
     }
 
-
     public function destroyDocument($type, $id)
     {
         // Fetch the document by ID
@@ -319,20 +318,20 @@ class EquipementController extends Controller
         return view('admin.equipement.create', compact('type'));
     }
 
-
     public function store(Request $request, $type)
     {
         // Validate the input fields, including file validations
         $request->validate([
             'marque' => 'required|string|max:255',
             'modele' => 'required|string|max:255',
+            'description' => 'nullable|string|max:5000',
             'largeur_plateau_nettoyage' => 'nullable|string|max:255',
             'largeur_tampons' => 'nullable|string|max:255',
             'galonnage' => 'nullable|string|max:255',
             'superficie_nettoyage' => 'nullable|string|max:255',
             'prix' => 'nullable|string|max:25',
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'documents.*' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:102400',
+            'documents.*' => 'nullable|file|mimes:pdf,doc,docx|max:102400',
         ]);
 
         // Create a new equipment model instance based on the type
@@ -425,7 +424,7 @@ class EquipementController extends Controller
         }        
 
         // Redirect to the equipment list page with success message
-        return redirect()->route('equipement.show', ['type' => $type, 'id' => $equipement->id])
-            ->with('success', 'Équipement ajouté avec succès.');
+        return redirect()->back()->with('success', 'Équipement ajouté avec succès.');
+
     }
 }

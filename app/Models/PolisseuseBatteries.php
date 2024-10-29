@@ -11,11 +11,11 @@ class PolisseuseBatteries extends Model
     protected $fillable = [
         'marque', 
         'modele', 
+        'description',
         'largeur_plateau_nettoyage', 
         'largeur_tampons', 
         'galonnage', 
         'superficie_nettoyage', 
-        'description',
         'prix'
     ];
 

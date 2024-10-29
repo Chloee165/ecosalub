@@ -33,8 +33,6 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin.index')->mi
 // User Index (only accessible to authenticated users)
 Route::get('/user', [UserController::class, 'index'])->name('user.index')->middleware('auth:web');
 
-
-
 // Equipement
 Route::get('/equipement', [EquipementController::class, 'showEquipements'])->name('equipement');
 Route::get('/equipement/aspirateur', [EquipementController::class, 'showAspirateur'])->name('equipement.aspirateur');
@@ -52,8 +50,7 @@ Route::get('/admin/equipements/{type}', [EquipementController::class, 'showEquip
 Route::get('/admin/equipement/{type}/{id}/edit', [EquipementController::class, 'edit'])->name('equipement.edit');
 Route::put('/admin/equipement/{type}/{id}', [EquipementController::class, 'update'])->name('equipement.update');
 Route::delete('/admin/equipements/{type}/{id}', [EquipementController::class, 'destroy'])->name('equipement.destroy');
-Route::get('/equipement/{type}/create', [EquipementController::class, 'create'])->name('equipement.create');
-Route::post('/equipement/{type}/store', [EquipementController::class, 'store'])->name('equipement.store');
+Route::get('admin/equipement/{type}/create', [EquipementController::class, 'create'])->name('equipement.create');
 Route::post('/equipement/{type}/store', [EquipementController::class, 'store'])->name('equipement.store');
 
 // Route to delete an image
