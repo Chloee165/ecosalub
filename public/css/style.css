@@ -1468,6 +1468,10 @@ iframe {
   margin: 0;
 }
 
+.titre-equipement {
+  text-align: center;
+}
+
 /*
 @media (min-width: 768px) {
 }

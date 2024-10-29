@@ -75,6 +75,11 @@
                         value="{{ old('prix', $equipement->prix ?? '') }}" class="form-control" maxlength="10">
                 </div>
 
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" class="form-control">{{ old('description') }}</textarea>
+                </div>
+
                 <!-- Existing Images Section -->
                 <div class="form-group">
                     <label>Images actuelles</label>

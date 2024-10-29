@@ -51,6 +51,10 @@
                         <li><strong>Prix:</strong> {{ $equipement->prix }} $CAD</li>
                     @endif
 
+                    @if($equipement->description)
+                        <li><strong>Description:</strong> {{ $equipement->description }}</li>
+                    @endif
+
                     @if($equipement->documents->isNotEmpty())
                         <p class="mt-3"><strong>Documents:</strong></p>
                         <ul>

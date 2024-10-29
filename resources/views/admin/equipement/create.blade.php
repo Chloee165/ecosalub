@@ -25,37 +25,37 @@
                 <!-- Form fields -->
                 <div class="form-group">
                     <label for="marque">Marque</label>
-                    <input type="text" id="marque" name="marque" value="{{ old('marque') }}" class="form-control" required>
+                    <input type="text" id="marque" name="marque" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="modele">Modèle</label>
-                    <input type="text" id="modele" name="modele" value="{{ old('modele') }}" class="form-control" required>
+                    <input type="text" id="modele" name="modele" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="largeur_plateau_nettoyage">Largeur du plateau de nettoyage</label>
-                    <input type="text" id="largeur_plateau_nettoyage" name="largeur_plateau_nettoyage" value="{{ old('largeur_plateau_nettoyage') }}" class="form-control">
+                    <input type="text" id="largeur_plateau_nettoyage" name="largeur_plateau_nettoyage" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="largeur_tampons">Largeur des tampons</label>
-                    <input type="text" id="largeur_tampons" name="largeur_tampons" value="{{ old('largeur_tampons') }}" class="form-control">
+                    <input type="text" id="largeur_tampons" name="largeur_tampons" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="galonnage">Galonnage</label>
-                    <input type="text" id="galonnage" name="galonnage" value="{{ old('galonnage') }}" class="form-control">
+                    <input type="text" id="galonnage" name="galonnage" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="superficie_nettoyage">Superficie de nettoyage</label>
-                    <input type="text" id="superficie_nettoyage" name="superficie_nettoyage" value="{{ old('superficie_nettoyage') }}" class="form-control">
+                    <input type="text" id="superficie_nettoyage" name="superficie_nettoyage" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea id="description" name="description" class="form-control">{{ old('description') }}</textarea>
+                    <textarea id="description" name="description" class="form-control"></textarea>
                 </div>
 
                 <div class="form-group">

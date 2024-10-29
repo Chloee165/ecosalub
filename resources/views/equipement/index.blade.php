@@ -22,49 +22,49 @@
             <li>
                 <a href="{{ route('equipement.recureuse') }}">
                     <img src="{{ asset('img/Récureuse-Scrubber.png') }}" alt="">
-                    <p>Récureuses</p>
+                    <p class="titre-equipement">Récureuses</p>
                 </a>
             </li>
             <li>
                 <a href="{{ route('equipement.polisseuse-propane') }}">
                     <img src="{{ asset('img/Polisseuse-Burnisher_Propane.png') }}" alt="">
-                    <p>Polisseuses propane</p>
+                    <p class="titre-equipement">Polisseuses propane</p>
                 </a>
             </li>
             <li>
                 <a href="{{ route('equipement.polisseuse-batteries') }}">
                     <img src="{{ asset('img/Polisseuse-Burnicher_batterie.png') }}" alt="">
-                    <p>Polisseuses Batteries</p>
+                    <p class="titre-equipement">Polisseuses Batteries</p>
                 </a>
             </li>
             <li>
                 <a href="{{ route('equipement.decapeuse') }}">
                     <img src="{{ asset('img/img-a-venir.png') }}" alt="">
-                    <p>Décapeuses</p>
+                    <p class="titre-equipement">Décapeuses</p>
                 </a>
             </li>
             <li>
                 <a href="{{ route('equipement.aspirateur') }}">
                     <img src="{{ asset('img/img-a-venir.png') }}" alt="">
-                    <p>Aspirateurs</p>
+                    <p class="titre-equipement">Aspirateurs</p>
                 </a>
             </li>
             <li>
                 <a href="{{ route('equipement.extracteur-tapis') }}">
                     <img src="{{ asset('img/img-a-venir.png') }}" alt="">
-                    <p>Extracteurs à tapis</p>
+                    <p class="titre-equipement">Extracteurs à tapis</p>
                 </a>
             </li>
             <li>
                 <a href="{{ route('equipement.balai-mecanique') }}">
                     <img src="{{ asset('img/img-a-venir.png') }}" alt="">
-                    <p>Balais mécaniques</p>
+                    <p class="titre-equipement">Balais mécaniques</p>
                 </a>
             </li>
             <li>
                 <a href="{{ route('equipement.machine-glace-seche') }}">
                     <img src="{{ asset('img/img-a-venir.png') }}" alt="">
-                    <p>Machines à glace sèche</p>
+                    <p class="titre-equipement">Machines à glace sèche</p>
                 </a>
             </li>
         </ul>

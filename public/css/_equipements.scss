@@ -113,6 +113,7 @@
         }
     }
 }
+
 #liste-equipment-title {
     display: flex;
     flex-direction: row;
@@ -123,6 +124,7 @@
         margin-right: 5%;
     }
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1);
@@ -135,10 +137,14 @@
     border: 1px solid #ccc;
     margin: 5px;
 }
+
 .p-documents {
     margin: 0;
 }
 
+.titre-equipement {
+    text-align: center;
+}
 /*
 @media (min-width: 768px) {
 }
