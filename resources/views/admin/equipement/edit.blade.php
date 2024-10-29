@@ -23,7 +23,6 @@
                 enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-
                 <!-- Marque -->
                 <div class="form-group">
                     <label for="marque">Marque</label>

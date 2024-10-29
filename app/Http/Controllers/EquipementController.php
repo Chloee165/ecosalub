@@ -227,7 +227,7 @@ class EquipementController extends Controller
         }
 
         // Redirect with success message
-        return redirect()->route('equipement.show', ['type' => $type])
+        return redirect()->route('equipement.admin.show', ['type' => $type])
             ->with('success', 'Équipement et fichiers modifiés avec succès.');
     }
 
