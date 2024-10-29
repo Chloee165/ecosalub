@@ -49,9 +49,10 @@ Route::get('/equipement/{type}/{id}', [EquipementController::class, 'showEquipem
 Route::get('/admin/equipements/{type}', [EquipementController::class, 'showEquipementAdmin'])->name('equipement.admin.show');
 Route::get('/admin/equipement/{type}/{id}/edit', [EquipementController::class, 'edit'])->name('equipement.edit');
 Route::put('/admin/equipement/{type}/{id}', [EquipementController::class, 'update'])->name('equipement.update');
-Route::delete('/admin/equipements/{type}/{id}', [EquipementController::class, 'destroy'])->name('equipement.destroy');
+Route::post('/admin/equipements/destroy', [EquipementController::class, 'destroy'])->name('equipement.destroy');
 Route::get('admin/equipement/{type}/create', [EquipementController::class, 'create'])->name('equipement.create');
-Route::post('/equipement/{type}/store', [EquipementController::class, 'store'])->name('equipement.store');
+Route::post('admin/equipement/{type}/store', [EquipementController::class, 'store'])->name('equipement.store');
+
 // Route to delete an image
 Route::delete('/admin/equipement/{type}/image/{id}', [EquipementController::class, 'destroyImage'])->name('equipement.image.destroy');
 // Route to delete a document
