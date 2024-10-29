@@ -329,8 +329,8 @@ class EquipementController extends Controller
             'galonnage' => 'nullable|max:255',
             'superficie_nettoyage' => 'nullable|max:255',
             'prix' => 'nullable|max:25',
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:102400',
-            'documents.*' => 'nullable|file|mimes:pdf,doc,docx|max:102400',
+            'images.*' => 'nullable|mimes:jpeg,png,jpg,gif|max:102400',
+            'documents.*' => 'nullable|mimes:pdf,doc,docx|max:102400',
         ], [
             'marque.required' => "Veuillez entrer la marque de l'équipement",
             'marque.max' => "Le nom de la marque ne doit pas dépasser :max caractères",
@@ -342,8 +342,10 @@ class EquipementController extends Controller
             'galonnage.max' => "Le galonnage ne doit pas dépasser :max caractères",
             'superficie_nettoyage.max' => "La superficie de nettoyage de ne doit pas dépasser :max caractères",
             'prix.max' => "Le prix ne doit pas dépasser :max caractères",
-            /* 'image.*.image' => */
-
+            'images.*.mimes' => "L'image doit avoir un format valide (jpeg, png, jpg, gif)",
+            'images.*.max' => "La grosseur de l'image ne doit pas dépasser :max Mo",
+            'documents.*.mimes' => "Le document doit avoir un format valide (pdf, doc, docx)",
+            'documents.*.max' => "La grosseur du document ne doit pas dépasser :max Mo"
         ]);
 
         // Create a new equipment model instance based on the type
