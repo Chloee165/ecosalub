@@ -19,7 +19,7 @@
                 <a href="mailto:info@ecosalub.ca"><img src="{{ asset('img/envelope.png') }}" alt="Send Email"></a>
                 <a href="https://www.linkedin.com/company/ecosalub-laval-toronto/?viewAsMember=true"><img src="{{ asset('img/linkedin.png') }}" alt="LinkedIn"></a>
             </div>
-            <iframe class="map" src="https://www.google.com/maps/embed?..."></iframe>
+            <iframe class="map" <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5584.288794383871!2d-73.7470242!3d45.5876419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9215c5506270b%3A0x7d7c9922f3e84d7d!2s3060%20Rue%20Peugeot%2C%20Laval%2C%20QC%20H7L%205C5!5e0!3m2!1sen!2sca!4v1730227260969!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div id="div-footer2">
             <h2>Ecosalub Toronto</h2>
@@ -37,7 +37,7 @@
             <a href="mailto:info@ecosalub.ca"><img src="{{ asset('img/envelope.png') }}" alt="Send Email"></a>
             <a href="https://www.linkedin.com/company/ecosalub-laval-toronto/?viewAsMember=true"><img src="{{ asset('img/linkedin.png') }}" alt="LinkedIn"></a>
             </div>
-            <iframe class="map" src="https://www.google.com/maps/embed?..."></iframe>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5772.935549499578!2d-79.60063699999998!3d43.6592404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3854b033328f%3A0x5110d53a3049dfa4!2s2601%20Matheson%20Blvd%20E%2C%20Mississauga%2C%20ON%20L4W%205A8!5e0!3m2!1sen!2sca!4v1730227340001!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 </footer>

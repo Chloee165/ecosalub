@@ -16,6 +16,7 @@
   #footer-content {
     iframe {
       width: 100vw;
+      height: min-content;
     }
     @media (min-width: 768px) {
       display: grid;
