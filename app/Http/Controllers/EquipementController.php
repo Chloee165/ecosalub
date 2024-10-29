@@ -8,6 +8,7 @@ use App\Models\BalaiMecanique;
 use App\Models\Decapeuse;
 use App\Models\Image;
 use App\Models\Document;
+use App\Models\Equipement;
 use App\Models\ExtracteurTapis;
 use App\Models\MachineGlaceSeche;
 use App\Models\PolisseuseBatteries;
@@ -78,7 +79,7 @@ class EquipementController extends Controller
     {
         // Fetch the specific equipment based on the type and ID
         $equipement = null;
-    
+
         switch ($type) {
             case 'aspirateur':
                 $equipement = Aspirateur::with(['images', 'documents'])->findOrFail($id);
@@ -107,11 +108,11 @@ class EquipementController extends Controller
             default:
                 abort(404); // If type is not recognized
         }
-      
+
         // Return the view for a specific equipment item
         return view('equipement.show', compact('equipement', 'type'));
     }
-    
+
     /**
      * Show equipment by type for Admin
      */
@@ -236,16 +237,15 @@ class EquipementController extends Controller
     /**
      * Destroy (delete) equipment.
      */
-    public function destroy($type, $id)
+    public function destroy(Request $request)
     {
         // Fetch the equipment model based on the type and id
-        $equipement = $this->getEquipmentModel($type, $id);
+        $equipement = $this->getEquipmentModel($request->type, $request->id);
 
-        // Delete the equipment
         $equipement->delete();
 
         // Redirect back to the equipment list with a success message
-        return redirect()->route('equipement.show', ['type' => $type])
+        return redirect()->route('equipement.admin.show', ['type' => $request->type])
             ->with('success', 'Équipement supprimé avec succès.');
     }
 
@@ -321,16 +321,29 @@ class EquipementController extends Controller
     {
         // Validate the input fields, including file validations
         $request->validate([
-            'marque' => 'required|string|max:255',
-            'modele' => 'required|string|max:255',
-            'description' => 'nullable|string|max:5000',
-            'largeur_plateau_nettoyage' => 'nullable|string|max:255',
-            'largeur_tampons' => 'nullable|string|max:255',
-            'galonnage' => 'nullable|string|max:255',
-            'superficie_nettoyage' => 'nullable|string|max:255',
-            'prix' => 'nullable|string|max:25',
+            'marque' => 'required|max:255',
+            'modele' => 'required|max:255',
+            'description' => 'nullable|max:5000',
+            'largeur_plateau_nettoyage' => 'nullable|max:255',
+            'largeur_tampons' => 'nullable|max:255',
+            'galonnage' => 'nullable|max:255',
+            'superficie_nettoyage' => 'nullable|max:255',
+            'prix' => 'nullable|max:25',
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:102400',
             'documents.*' => 'nullable|file|mimes:pdf,doc,docx|max:102400',
+        ], [
+            'marque.required' => "Veuillez entrer la marque de l'équipement",
+            'marque.max' => "Le nom de la marque ne doit pas dépasser :max caractères",
+            'modele.required' => "Veuillez entrer le modèle de l'équipement",
+            'modele.max' => "Le nom du modèle ne doit pas dépasser :max caractères",
+            'description.max' => "La description du produit ne doit pas dépasser :max caractères",
+            'largeur_plateau_nettoyage.max' => "La largeur du plateau de nettoyage ne doit pas dépasser :max caractères",
+            'largeur_tampons.max' => "La largeur des tampons ne doit pas dépasser :max caractères",
+            'galonnage.max' => "Le galonnage ne doit pas dépasser :max caractères",
+            'superficie_nettoyage.max' => "La superficie de nettoyage de ne doit pas dépasser :max caractères",
+            'prix.max' => "Le prix ne doit pas dépasser :max caractères",
+            /* 'image.*.image' => */
+
         ]);
 
         // Create a new equipment model instance based on the type
@@ -381,16 +394,16 @@ class EquipementController extends Controller
             foreach ($request->file('images') as $image) {
                 // Define the target path in 'public/storage/images'
                 $targetPath = public_path('storage/images');
-        
+
                 // Ensure the directory exists
                 if (!file_exists($targetPath)) {
                     mkdir($targetPath, 0755, true);
                 }
-        
+
                 // Move the uploaded file to 'public/storage/images'
                 $imageName = $image->getClientOriginalName();
                 $image->move($targetPath, $imageName);
-        
+
                 // Create a new Image model entry
                 $equipement->images()->create([
                     'image_path' => 'storage/images/' . $imageName,
@@ -401,27 +414,27 @@ class EquipementController extends Controller
 
         // Handle document uploads
         if ($request->hasFile('documents')) {
-            
+
             foreach ($request->file('documents') as $document) {
                 // Define the target path in 'public/storage/documents'
                 $targetPath = public_path('storage/documents');
-        
+
                 // Ensure the directory exists
                 if (!file_exists($targetPath)) {
                     mkdir($targetPath, 0755, true);
                 }
-        
+
                 // Move the uploaded file to 'public/storage/documents'
                 $documentName = $document->getClientOriginalName();
                 $document->move($targetPath, $documentName);
-        
+
                 // Create a new Document model entry
                 $equipement->documents()->create([
                     'document_path' => 'storage/documents/' . $documentName,
                     'description' => 'Document for ' . $equipement->modele
                 ]);
             }
-        }        
+        }
 
         // Redirect to the equipment list page with success message
         return redirect()->back()->with('success', 'Équipement ajouté avec succès.');
