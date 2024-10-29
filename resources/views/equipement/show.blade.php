@@ -42,10 +42,6 @@
                     @if($equipement->superficie_nettoyage)
                         <li><strong>Superficie de nettoyage:</strong> {{ $equipement->superficie_nettoyage }}</li>
                     @endif
-                    
-                    @if($equipement->description)
-                        <li><strong>Description:</strong> {{ $equipement->description }}</li>
-                    @endif
 
                     @if($equipement->prix)
                         <li><strong>Prix:</strong> {{ $equipement->prix }} $CAD</li>
