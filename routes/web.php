@@ -52,7 +52,6 @@ Route::put('/admin/equipement/{type}/{id}', [EquipementController::class, 'updat
 Route::delete('/admin/equipements/{type}/{id}', [EquipementController::class, 'destroy'])->name('equipement.destroy');
 Route::get('admin/equipement/{type}/create', [EquipementController::class, 'create'])->name('equipement.create');
 Route::post('/equipement/{type}/store', [EquipementController::class, 'store'])->name('equipement.store');
-
 // Route to delete an image
 Route::delete('/admin/equipement/{type}/image/{id}', [EquipementController::class, 'destroyImage'])->name('equipement.image.destroy');
 // Route to delete a document
