@@ -58,11 +58,12 @@
                                             class="btn btn-primary btn-sm">Modifier</a>
 
                                         <form
-                                            action="{{ route('equipement.destroy', ['type' => $type, 'id' => $equipement->id]) }}"
+                                            action="{{ route('equipement.destroy') }}"
                                             method="POST" style="display:inline-block;">
                                             @csrf
-                                            @method('DELETE')
+                                            {{-- @method('DELETE') --}}
                                             <input type="hidden" value="{{$equipement->id}}" name="id">
+                                            <input type="hidden" name="type" value="{{$type}}">
                                             <button type="submit" class="btn btn-danger btn-sm"
                                                 onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet équipement ?')">Supprimer</button>
                                         </form>
