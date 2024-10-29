@@ -46,7 +46,7 @@
                     <a class="nav-a" href="{{ route('construction') }}">Services</a>
                 </li>
                 <li class="btn-blc">
-                    <a class="btn-soumission" href="{{ route('construction') }}">SOUMISSION</a>
+                    <a class="btn-soumission" href="{{ route('contact') }}">SOUMISSION</a>
                 </li>
                 <li class="btn-bleu">
                     <a class="btn-contact" href="{{ route('contact') }}">CONTACT</a>
@@ -66,6 +66,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <span class="close-btn" id="closeMenuBtn">X</span>
         <ul class="mobile-nav">
+            <li><a href="{{ route('home') }}">Accueil</a></li>
             <li><a href="{{ route('entreprise') }}">Entreprise</a></li>
             <li><a href="{{ route('equipement') }}">Équipement</a></li>
             <li><a href="{{ route('construction') }}">Services</a></li>
@@ -73,6 +74,8 @@
             <li><a class="blue" href="{{ route('construction') }}">Documentation</a></li>
             <li><a class="blue" href="{{ route('construction') }}">Articles</a></li>
             <li><a class="blue" href="{{ route('admin.login') }}">Admin</a></li>
+            <li><a class="blue" href="{{ route('contact') }}">Soumission</a></li>
+            <li><a class="blue" href="{{ route('contact') }}">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -81,7 +84,7 @@
     <h1 class="header-phrase">{{ $headerPhrase }}</h1>
     <img class="img-header-home" src="{{ asset($headerImage) }}" alt="Header Image">
     <section id="mobile-btns-section">
-        <a class="btn-soumission-mobile btn-blc" href="{{ route('construction') }}">SOUMISSION</a>
+        <a class="btn-soumission-mobile btn-blc" href="{{ route('contact') }}">SOUMISSION</a>
         <a class="btn-contact-mobile btn-bleu" href="{{ route('contact') }}">CONTACT</a>
     </section>
 </header>
