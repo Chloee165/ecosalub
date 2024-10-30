@@ -62,6 +62,7 @@
                                             method="POST" style="display:inline-block;">
                                             @csrf
                                             @method('DELETE')
+                                            <input type="hidden" value="{{$equipement->id}}" name="id">
                                             <button type="submit" class="btn btn-danger btn-sm"
                                                 onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet équipement ?')">Supprimer</button>
                                         </form>

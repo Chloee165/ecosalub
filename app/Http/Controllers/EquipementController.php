@@ -290,11 +290,11 @@ class EquipementController extends Controller
         $image->delete();
 
         // Redirect back with success message
-        return redirect()->route('equipement.edit', ['type' => $type, 'id' => $image->equipement_id])
+        return redirect()->route('admin.equipement', ['type' => $type, 'id' => $image->equipement_id])
             ->with('success', 'Image supprimée avec succès.');
     }
 
-    public function destroyDocument($type, $id)
+    public function destroyDocument($id)
     {
         // Fetch the document by ID
         $document = Document::findOrFail($id);
@@ -308,8 +308,7 @@ class EquipementController extends Controller
         $document->delete();
 
         // Redirect back with success message
-        return redirect()->route('equipement.edit', ['type' => $type, 'id' => $document->equipement_id])
-            ->with('success', 'Document supprimé avec succès.');
+        return redirect()->back()->with('success', 'Document supprimé avec succès.');
     }
 
     public function create($type)
@@ -367,6 +366,7 @@ class EquipementController extends Controller
         // Assign the validated values to the equipment instance
         $equipement->marque = $request->marque;
         $equipement->modele = $request->modele;
+        $equipement->description = $request->description;
         $equipement->largeur_plateau_nettoyage = $request->largeur_plateau_nettoyage;
         $equipement->largeur_tampons = $request->largeur_tampons;
         $equipement->galonnage = $request->galonnage;
@@ -425,6 +425,5 @@ class EquipementController extends Controller
 
         // Redirect to the equipment list page with success message
         return redirect()->back()->with('success', 'Équipement ajouté avec succès.');
-
     }
 }
