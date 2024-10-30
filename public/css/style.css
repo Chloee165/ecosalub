@@ -112,6 +112,8 @@ hr {
   font-weight: 600;
   font-size: 16px;
   padding: 6px 14px;
+  max-height: -moz-min-content;
+  max-height: min-content;
   color: #E3EAFF !important;
   background-color: #008FD5;
 }
@@ -151,6 +153,8 @@ hr {
   font-weight: 600;
   font-size: 16px;
   padding: 6px 14px;
+  max-height: -moz-min-content;
+  max-height: min-content;
   background-color: #E3EAFF;
   border: 1px solid #008FD5 !important;
 }
@@ -226,6 +230,7 @@ hr {
 
 .div-logo {
   display: flex;
+  max-height: 50px;
 }
 .div-logo a {
   align-self: center;
@@ -1694,4 +1699,41 @@ iframe {
 }
 #nav-mobile .mobile-menu.open {
   right: 0;
+}
+
+.nav-bottom .dropdown {
+  position: relative;
+}
+.nav-bottom .dropdown a {
+  color: rgb(29, 149, 218) !important;
+  display: block;
+  text-decoration: none;
+}
+.nav-bottom .dropdown a:hover {
+  text-decoration: underline !important;
+}
+.nav-bottom .dropdown .dropdown-content {
+  display: none;
+  z-index: 100;
+  left: 0;
+  height: -moz-max-content;
+  height: max-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 4px #000000;
+}
+.nav-bottom .dropdown .dropdown-content a {
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  color: white;
+  font-size: 16px;
+}
+.nav-bottom .dropdown .dropdown-content a:hover {
+  color: #008fd5;
+}
+.nav-bottom .dropdown:hover .dropdown-content {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

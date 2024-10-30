@@ -1,0 +1,40 @@
+.nav-bottom {
+    .dropdown {
+        position: relative;
+    
+        a {
+            color: rgb(29, 149, 218)!important;
+            display: block;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline!important;
+            }
+        }
+    
+        .dropdown-content {
+            display: none;
+            z-index: 100;
+            left: 0;
+            height: max-content;
+            max-width: min-content;
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 4px #000000;;
+    
+            a {
+                text-decoration: none;
+                display: block;
+                padding: 5px 10px;
+                color: white;
+                font-size: 16px;
+                &:hover {
+                    color: #008fd5;
+                }
+            }
+        }
+    
+        &:hover .dropdown-content {
+            display: block;
+        }
+    }
+}

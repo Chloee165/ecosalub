@@ -6,6 +6,7 @@
     font-weight: 600;
     font-size: 16px;
     padding: 6px 14px;
+    max-height: min-content;
     @media (min-width: 768px) {
         font-size: 11px;
         padding: 4px 10px;
