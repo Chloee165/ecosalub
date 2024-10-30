@@ -1,0 +1,40 @@
+.dropdown {
+    position: relative;
+    margin-right: 15px;
+
+    a {
+        text-decoration: underline;
+        color: white;
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+        &:hover {
+            color: #008fd5;
+        }
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: #3c4d54;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 5px 10px;
+            color: white;
+            font-size: 16px;
+            &:hover {
+                color: #008fd5;
+            }
+        }
+    }
+
+    &:hover .dropdown-content {
+        display: block;
+    }
+}

@@ -1355,6 +1355,7 @@ iframe {
 }
 #liens-equipements #types-equipements img {
   max-width: 100%;
+  margin-top: 25px;
 }
 #liens-equipements #types-equipements p {
   color: #3C4D54;
@@ -1568,6 +1569,11 @@ iframe {
   width: 100%;
   min-height: auto;
 }
+.admin-panel-nav .main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
 .admin-panel-nav .sidebar {
   display: flex;
   width: 100%;
@@ -1618,11 +1624,6 @@ iframe {
 }
 .admin-panel-nav .sidebar ul.menu .dropdown:hover .dropdown-content {
   display: block;
-}
-.admin-panel-nav .main-content {
-  flex-grow: 1;
-  padding: 20px;
-  background-color: #f5f5f5;
 }
 
 #nav-mobile {
