@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Produit extends Model
 {
-    use HasFactory;
+    protected $fillable = ['title', 'description', 'price', 'section'];
+
+    public function photos()
+    {
+        return $this->hasMany(Image::class);
+    }
+
+    public function documents()
+    {
+        return $this->hasMany(Document::class);
+    }
 }
