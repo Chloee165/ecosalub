@@ -33,10 +33,10 @@
             <h2>Ecosalub Toronto</h2>
             <a href="https://www.google.com/maps/place/2601+Matheson+Blvd+E,+Mississauga,+ON+L4W+5A8/@43.6592404,-79.600637,16z/data=!4m6!3m5!1s0x882b3854b033328f:0x5110d53a3049dfa4!8m2!3d43.6592404!4d-79.600637!16s%2Fg%2F11c3q3cmb_?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D">
                 <p>245, Unit 15, Boul. Matheson E.</p>
-                <p>Mississauga, Ontario, L4Z 3K2, CA</p>
+                <p>Mississauga, Ontario, L4Z 3K2,</p>
+                <p>CA</p>
             </a>
             <br>
-            <p><a href="tel:+14502411234">(450) 241-1234</a></p>
             <p><a href="tel:+18334601581">(833) 460-1581</a></p>
             <p><a href="mailto:info@ecosalub.ca">info@ecosalub.ca</a></p>
 

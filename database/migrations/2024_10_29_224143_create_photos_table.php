@@ -8,9 +8,9 @@ class CreatePhotosTable extends Migration
 {
     public function up()
     {
-        Schema::create('photos', function (Blueprint $table) {
+        Schema::create('produit_image', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+            $table->foreignId('produit_id')->constrained()->onDelete('cascade');
             $table->string('file_path');
             $table->timestamps();
         });
@@ -18,6 +18,6 @@ class CreatePhotosTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('produit_image');
     }
 }

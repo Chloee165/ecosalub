@@ -8,18 +8,17 @@ class CreateProduitsTable extends Migration
 {
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('produits', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('titre');
             $table->text('description')->nullable();
-            $table->decimal('price', 8, 2);
-            $table->enum('section', ['batteries', 'chargeurs', 'pièces', 'autre']);
-            $table->timestamps();
+            $table->decimal('prix', 8, 2);
+            $table->text('categorie');
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('produits');
     }
 }

@@ -8,9 +8,9 @@ class CreateDocumentsTable extends Migration
 {
     public function up()
     {
-        Schema::create('documents', function (Blueprint $table) {
+        Schema::create('produit_document', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+            $table->foreignId('produit_id')->constrained()->onDelete('cascade');
             $table->string('file_path');
             $table->timestamps();
         });
@@ -18,6 +18,6 @@ class CreateDocumentsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('documents');
+        Schema::dropIfExists('produit_document');
     }
 }
