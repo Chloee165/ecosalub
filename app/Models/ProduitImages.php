@@ -1,32 +1,17 @@
 <?php
 
-use App\Models\Produit;
-use Illuminate\Database\Eloquent\Model;
-
-class Image extends Model
-{
-    protected $fillable = ['product_id', 'file_path'];
-
-    public function product()
-    {
-        return $this->belongsTo(Produit::class);
-    }
-}
-
-<?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class PolisseuseBatteriesImage extends Model
 {
-    protected $table = 'polisseuse_batterie_images';
+    protected $table = 'produit_images';
 
-    protected $fillable = ['polisseuse_batterie_id', 'image_path'];
+    protected $fillable = ['produit_image_id', 'image_path'];
 
-    public function polisseuseBatterie()
+    public function produit()
     {
-        return $this->belongsTo(PolisseuseBatteries::class, 'polisseuse_batterie_id');
+        return $this->belongsTo(Produit::class, 'produit_id');
     }
 }
