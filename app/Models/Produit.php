@@ -9,7 +9,7 @@ class Produit extends Model
 {
     protected $fillable = ['title', 'description', 'price', 'section'];
 
-    public function photos()
+    public function images()
     {
         return $this->hasMany(Image::class);
     }
