@@ -26,13 +26,13 @@
 
             </li>
             <li class="dropdown">
-                <a href="#">Produits/Accessoires</a>
+                <!--<a href="#">Produits/Accessoires</a>
                 <ul class="dropdown-content">
                     <li><a href="{{ route('produit.admin.show', ['type' => 'chargeurs']) }}">Chargeurs</a></li>
                     <li><a href="{{ route('produit.admin.show', ['type' => 'batteries']) }}">Batteries</a></li>
                     <li><a href="{{ route('produit.admin.show', ['type' => 'pieces']) }}">Pièces</a></li>
                     <li><a href="{{ route('produit.admin.show', ['type' => 'autre']) }}">Autre</a></li>
-                </ul>
+                </ul>-->
             </li>
         </ul>
     </nav>

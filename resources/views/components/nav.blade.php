@@ -84,8 +84,28 @@
         <ul class="mobile-nav">
             <li><a href="{{ route('home') }}">Accueil</a></li>
             <li><a href="{{ route('entreprise') }}">Entreprise</a></li>
-            <li><a href="{{ route('construction') }}">Produits et Accessoires</a></li>
-            <li><a href="{{ route('equipement') }}">Équipement</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-a">Produits et Accessoires</a>
+                <ul class="dropdown-content">
+                    <li><a href="{{ route('construction') }}">Chargeurs</a></li>
+                    <li><a href="{{ route('construction') }}">Batteries</a></li>
+                    <li><a href="{{ route('construction') }}">Pièces</a></li>
+                    <li><a href="{{ route('construction') }}">Autre</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="{{ route('equipement') }}" class="nav-a">Équipements</a>
+                <ul class="dropdown-content">
+                    <li><a href="{{ route('equipement.recureuse') }}">Récureuses</a></li>
+                    <li><a href="{{ route('equipement.polisseuse-propane') }}">Polisseuses propane</a></li>
+                    <li><a href="{{ route('equipement.polisseuse-batteries' )}}">Polisseuses batteries</a></li>
+                    <li><a href="{{ route('equipement.decapeuse') }}">Décapeuses</a></li>
+                    <li><a href="{{ route('equipement.aspirateur') }}">Aspirateurs</a></li>
+                    <li><a href="{{ route('equipement.extracteur-tapis') }}">Extracteurs à tapis</a></li>
+                    <li><a href="{{ route( 'equipement.balai-mecanique') }}">Balais mécaniques</a></li>
+                    <li><a href="{{ route('equipement.machine-glace-seche') }}">Machines à glace sèche</a></li>
+                </ul>
+            </li>
             <li><a href="{{ route('construction') }}">Services</a></li>
             <li><a class="blue" href="{{ route('user.login') }}">Portail</a></li>
             <li><a class="blue" href="{{ route('construction') }}">Documentation</a></li>
