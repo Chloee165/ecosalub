@@ -9,6 +9,8 @@ class Produit extends Model
 {
     protected $fillable = ['title', 'description', 'price', 'section'];
 
+    use HasFactory;
+
     public function images()
     {
         return $this->hasMany(Image::class);
@@ -17,5 +19,10 @@ class Produit extends Model
     public function documents()
     {
         return $this->hasMany(Document::class);
+    }
+
+    public function categorie_produit()
+    {
+        return $this->belongsTo(CategorieProduit::class);
     }
 }
