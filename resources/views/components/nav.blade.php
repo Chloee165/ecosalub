@@ -1,6 +1,6 @@
 @props([
     'headerImage' => 'img/fadeBlanc.jpg',
-    'headerPhrase' => "La référence pour vos besoins en équipement d'entretien commercial",
+    'headerPhrase' => "La référence pour vos besoins en équipement d'entretien commercial"
 ])
 
 <!-- Navigation Container -->
@@ -39,7 +39,7 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-a">Produits et Accessoires</a>
                     <ul class="dropdown-content">
-                        <li><a href="{{ route('construction') }}">Chargeurs</a></li>
+                        <li><a href="{{ route('produit.index', ['categorie' => 'chargeur']) }}">Chargeurs</a></li>
                         <li><a href="{{ route('construction') }}">Batteries</a></li>
                         <li><a href="{{ route('construction') }}">Pièces</a></li>
                         <li><a href="{{ route('construction') }}">Autre</a></li>
@@ -87,7 +87,7 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-a">Produits et Accessoires</a>
                 <ul class="dropdown-content">
-                    <li><a href="{{ route('construction') }}">Chargeurs</a></li>
+                    <li><a href="{{ route('produit.index', ['categorie' => 'chargeur']) }}">Chargeurs</a></li>
                     <li><a href="{{ route('construction') }}">Batteries</a></li>
                     <li><a href="{{ route('construction') }}">Pièces</a></li>
                     <li><a href="{{ route('construction') }}">Autre</a></li>
