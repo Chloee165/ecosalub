@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Produit;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -24,6 +25,8 @@ class DatabaseSeeder extends Seeder
             PolisseusePropaneSeeder::class,
             PolisseuseBatteriesSeeder::class,
             RecureuseSeeder::class,
+            CategorieProduitSeeder::class,
+            ProduitSeeder::class
         ]);
     }
 }
