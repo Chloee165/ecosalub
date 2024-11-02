@@ -11,9 +11,11 @@ class CreateProduitsTable extends Migration
         Schema::create('produits', function (Blueprint $table) {
             $table->id();
             $table->string('titre');
-            $table->text('description')->nullable();
+            $table->longText('description')->nullable();
             $table->decimal('prix', 8, 2);
-            $table->text('categorie');
+            /* $table->string('image'); */
+            $table->integer('categorie_produit_id');
+            $table->timestamps();
         });
     }
 
