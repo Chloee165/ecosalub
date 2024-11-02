@@ -4,9 +4,11 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ConstructionController;
 use App\Http\Controllers\EquipementController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VuesController;
 use App\Models\Equipement;
+use App\Models\Produit;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -44,6 +46,14 @@ Route::get('/equipement/polisseuse-batteries', [EquipementController::class, 'sh
 Route::get('/equipement/polisseuse-propane', [EquipementController::class, 'showPolisseusePropane'])->name('equipement.polisseuse-propane');
 Route::get('/equipement/recureuse', [EquipementController::class, 'showRecureuse'])->name('equipement.recureuse');
 Route::get('/equipement/{type}/{id}', [EquipementController::class, 'showEquipement'])->name('equipement.show');
+
+// Produit
+Route::get('/produit/show/{id}', [ProduitController::class, 'show'])->name('produit.show');
+Route::get('/produit/{categorie}', [ProduitController::class, 'index'])->name('produit.index'); // probablement toujours mettre cette route en derniere place
+
+// Produit admin section
+
+
 
 // Equipment admin section
 Route::get('/admin/equipements/{type}', [EquipementController::class, 'showEquipementAdmin'])->name('equipement.admin.show');
